@@ -1,8 +1,10 @@
 #!/bin/bash
 
-files="${@:2}"
-for file in $files; do
-    echo $files
+echo $@
+
+for file in "$@"; do
+    echo $file
+    shellcheck $file
 done
 
 echo "shell check done"
