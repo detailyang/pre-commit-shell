@@ -1,10 +1,13 @@
 #!/bin/bash
 
-echo $@
+echo "begin shellcheck" 
 
-for file in "$@"; do
-    echo $file
-    shellcheck $file
-done
+which shellcheck &> /dev/null
+if [[ $? != 0 ]]; then
+    echo "are you sure you have installed shellcheck?"
+    exit 1
+fi
 
-echo "shell check done"
+shellcheck $@
+exit $?
+
