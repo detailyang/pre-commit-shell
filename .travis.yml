@@ -1,2 +1,3 @@
 script:
-    make test
+    - pip install pre-commit
+    - make test
