@@ -22,6 +22,6 @@ git commit -a -m "let begin test" &> "$tmpfile"
 popd
 rm -rf "$tmpdir"
 
-grep --quiet "SC2115" $tmpfile && echo "SC2115 PASSED" || echo "SC2115 FAILED"; exit 2
-grep --quiet "SC2086" $tmpfile && echo "SC2086 PASSED" || echo "SC2086 FAILED"; exit 2
-grep --quiet "SC2034" $tmpfile && echo "SC2034 PASSED" || echo "SC2034 FAILED"; exit 2
+grep --quiet "SC2115" $tmpfile && echo "SC2115 PASSED" || (echo "SC2115 FAILED"; exit 2)
+grep --quiet "SC2086" $tmpfile && echo "SC2086 PASSED" || (echo "SC2086 FAILED"; exit 2)
+grep --quiet "SC2034" $tmpfile && echo "SC2034 PASSED" || (echo "SC2034 FAILED"; exit 2)

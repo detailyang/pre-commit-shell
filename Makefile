@@ -1,4 +1,4 @@
 .PHONY: test
 
 test:
-	cp -r ./test/ ~/test && \
+	bash test/init.sh
