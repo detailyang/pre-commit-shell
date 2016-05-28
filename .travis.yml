@@ -1,4 +1,5 @@
 sudo: true
 script:
     - sudo pip install pre-commit
+    - sudo apt-get install shellcheck
     - make test
