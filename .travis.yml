@@ -2,7 +2,9 @@ sudo: true
 before_install:
     - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
     - sudo apt-get update
-    - sudo apt-get install shellcheck
+    - sudo apt-get install cabal
+    - sudo cabal update
+    - sudo cabal install shellcheck
     - sudo pip install pre-commit
 script:
     - make test
