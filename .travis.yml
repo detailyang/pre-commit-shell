@@ -8,4 +8,5 @@ before_install:
     - sudo cabal install shellcheck
     - sudo pip install pre-commit
 script:
+    - export PATH=/home/travis/.cabal/bin:$PATH
     - make test
