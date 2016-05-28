@@ -13,7 +13,7 @@ cat << EOS > .pre-commit-config.yaml
     -   id: shell-lint
 EOS
 
-tmpdir=$(mktemp -t pre-commit-shell  -d)
+tmpdir=$(mktemp -t pre-commit-shell.XXXXXX  -d)
 cp test/test.sh "$tmpdir"
 cp test/.pre-commit-config.yaml "$tmpdir"
 pushd "$tmpdir"
@@ -22,7 +22,7 @@ git add .pre-commit-config.yaml; git commit -a -m "init test case"
 pre-commit install
 pre-commit run
 git add . --all
-tmpfile=$(mktemp -t pre-commit-shell)
+tmpfile=$(mktemp -t pre-commit-shell.XXX)
 git commit -a -m "let begin test" &> "$tmpfile"
 popd
 rm -rf "$tmpdir"
