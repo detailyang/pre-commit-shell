@@ -1,0 +1,4 @@
+-   repo: https://github.com/detailyang/pre-commit-shell
+    sha: HEAD
+    hooks:
+    -   id: shell-lint
