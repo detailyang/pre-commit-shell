@@ -1,3 +1,4 @@
+sudo: true
 script:
-    - pip install pre-commit
+    - sudo pip install pre-commit
     - make test
