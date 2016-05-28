@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # should trigger -- SC2115
 rm -rf "$abcd/"
 
