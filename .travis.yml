@@ -1,5 +1,8 @@
 sudo: true
-script:
+before_install:
+    - sudo apt-get install cabal-install
+    - cabal update
+    - cabal install shellcheck
     - sudo pip install pre-commit
-    - sudo apt-get install shellcheck
+script:
     - make test
