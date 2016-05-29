@@ -10,3 +10,10 @@ before_install:
 script:
     - export PATH=/home/travis/.cabal/bin:$PATH
     - make test
+deploy:
+  provider: releases
+  api_key: $CI_USER_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
