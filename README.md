@@ -16,7 +16,7 @@ Requirements
 ------------
   pre-commit-shell requires the following to run:
 
-  * [pre-commit](pre-commit.com)
+  * [pre-commit](http://pre-commit.com)
   * [shellcheck](https://www.shellcheck.net/)
     
 
