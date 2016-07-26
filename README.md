@@ -50,4 +50,4 @@ Author
 License
 -------
 
-pre-commit-shell is licensed under the [MIT] license.  
+pre-commit-shell is licensed under the [MIT](https://github.com/detailyang/pre-commit-shell/blob/master/LICENSE) license.  
