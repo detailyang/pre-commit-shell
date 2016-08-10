@@ -5,6 +5,8 @@ before_install:
     - sudo apt-get update
     - sudo apt-get install shellcheck
     - sudo pip install pre-commit
+    - sudo git config --global user.email "detailyang@gmail.com"
+    - sudo git config --global user.name "detailyang"
 script:
     - export PATH=/home/travis/.cabal/bin:$PATH
     - make test
