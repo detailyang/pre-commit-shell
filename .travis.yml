@@ -3,9 +3,7 @@ dist: trusty
 before_install:
     - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
     - sudo apt-get update
-    - sudo apt-get install -y cabal-install
-    - sudo cabal update
-    - sudo cabal install shellcheck
+    - sudo apt-get install shellcheck
     - sudo pip install pre-commit
 script:
     - export PATH=/home/travis/.cabal/bin:$PATH
