@@ -38,6 +38,6 @@ function failed() {
     exit 255
 }
 
-grep --quiet "SC2115" $tmpfile && passed "SC2115 PASSED" || error "SC2115 FAILED"
-grep --quiet "SC2086" $tmpfile && passed "SC2086 PASSED" || error "SC2086 FAILED"
-grep --quiet "SC2034" $tmpfile && passed "SC2034 PASSED" || error "SC2034 FAILED"
+grep --quiet "SC2115" $tmpfile && passed "SC2115 PASSED" || failed "SC2115 FAILED"
+grep --quiet "SC2086" $tmpfile && passed "SC2086 PASSED" || failed "SC2086 FAILED"
+grep --quiet "SC2034" $tmpfile && passed "SC2034 PASSED" || failed "SC2034 FAILED"
