@@ -31,7 +31,7 @@ example .pre-commit-config.yaml as following:
 
 ```yaml
 -   repo: git://github.com/detailyang/pre-commit-shell
-    sha: 1.0.0
+    sha: 1.0.1
     hooks:
     - id: shell-lint
 ```
