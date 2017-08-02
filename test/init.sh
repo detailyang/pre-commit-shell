@@ -18,9 +18,9 @@ cp test/test.sh "$tmpdir"
 cp test/.pre-commit-config.yaml "$tmpdir"
 cp test/.pre-commit-hooks.yaml "$tmpdir"
 pushd "$tmpdir"
-sudo git config --global user.email "detailyang@gmail.com"
-sudo git config --global user.name "detailyang"
 git init
+git config user.email "detailyang@gmail.com"
+git config user.name "detailyang"
 git add .pre-commit-config.yaml .pre-commit-hooks.yaml --all ; git commit -a -m "init test case"
 pre-commit install
 pre-commit run
