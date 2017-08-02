@@ -1,4 +1,4 @@
 -   repo: /Users/detailyang/art/opensource/personal/pre-commit-shell
-    sha: 3e118275d431f939f602cebe0de14289abe5398a
+    sha: a257808093def4b815db6924b62e806b88011e91
     hooks:
     -   id: shell-lint
