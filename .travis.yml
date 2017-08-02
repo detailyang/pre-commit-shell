@@ -9,8 +9,8 @@ before_install:
     - sudo git config --global user.name "detailyang"
 script:
     - export PATH=/home/travis/.cabal/bin:$PATH
-    - git config --global user.email "detailyang@gmail.com"
-    - git config --global user.name "detailyang"
+    - sudo git config --global user.email "detailyang@gmail.com"
+    - sudo git config --global user.name "detailyang"
     - make test
 deploy:
   provider: releases
