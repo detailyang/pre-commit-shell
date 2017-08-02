@@ -16,9 +16,10 @@ EOS
 tmpdir=$(mktemp -t pre-commit-shell.XXXXXX  -d)
 cp test/test.sh "$tmpdir"
 cp test/.pre-commit-config.yaml "$tmpdir"
+cp test/.pre-commit-hooks.yaml "$tmpdir"
 pushd "$tmpdir"
 git init
-git add .pre-commit-config.yaml; git commit -a -m "init test case"
+git add .pre-commit-config.yaml .pre-commit-hooks.yaml --all ; git commit -a -m "init test case"
 pre-commit install
 pre-commit run
 git add . --all
