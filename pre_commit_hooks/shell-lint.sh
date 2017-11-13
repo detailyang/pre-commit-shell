@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-echo "begin shellcheck" 
+set -o errexit
+set -o pipefail
+set -o nounset
 
-which shellcheck &> /dev/null
-if [[ $? != 0 ]]; then
-    echo "are you sure you have installed shellcheck?"
-    exit 1
-fi
+DEBUG=${DEBUG:=0}
+[[ $DEBUG -eq 1 ]] && set -o xtrace
+
+echo 'Begin shellcheck'
 
 shellcheck $@
 exit $?
