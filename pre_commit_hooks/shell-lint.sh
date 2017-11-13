@@ -14,3 +14,4 @@ if ! which shellcheck &>/dev/null; then
   exit 1
 fi
 
+shellcheck "$@"
