@@ -9,6 +9,8 @@ DEBUG=${DEBUG:=0}
 
 echo 'Begin shellcheck'
 
-shellcheck $@
-exit $?
+if ! which shellcheck &>/dev/null; then
+  >&2 echo 'shellcheck command not found'
+  exit 1
+fi
 
