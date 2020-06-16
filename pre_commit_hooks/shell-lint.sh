@@ -5,7 +5,7 @@ set -o pipefail
 set -o nounset
 
 DEBUG=${DEBUG:=0}
-[[ $DEBUG -eq 1 ]] && set -o xtrace
+[[ "$DEBUG" = "1" ]] && set -o xtrace
 
 if ! command which shellcheck &>/dev/null; then
   >&2 echo 'shellcheck command not found'
